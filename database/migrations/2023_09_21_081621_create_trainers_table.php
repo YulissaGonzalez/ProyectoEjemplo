@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('trainers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('apellido');
-            $table->string('avatar');
+            $table->string('apellido')->nullable();
+            $table->string('avatar')->nullable();
             $table->timestamps();
         });
     }

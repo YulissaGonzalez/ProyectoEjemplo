@@ -16,6 +16,7 @@ use App\Http\Controllers\TrainerController;
 |
 */
 Route::get('/trainers/create', [TrainerController::class, 'create']);
+Route::get('delete/{id}',[TrainerController::class, 'destroy']);
 
 Route::resource('/trainers', TrainerController::class);
 
