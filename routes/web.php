@@ -20,6 +20,8 @@ Route::get('delete/{id}',[TrainerController::class, 'destroy']);
 
 Route::resource('/trainers', TrainerController::class);
 
+Route::get('descargar-entrenadores', [TrainerController::class, 'pdf'])->name('listado.pdf');
+
 
 Route::get('rutaprueba',[PruebaController::class,'prueba2']);
 

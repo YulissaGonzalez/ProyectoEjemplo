@@ -11,6 +11,9 @@
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="/delete/{{$trainer->id}}" class="btn btn-primary">DELETE</a>
       <a href="/trainers/{{$trainer->id}}/edit" class="btn btn-secondary">EDITAR</a>
+      <br>
+      <br>
+      <a href="{{route('listado.pdf')}}" class="btn btn-primary">Descargar Entrenadores en PDF</a>
     </div>
 
 @endsection

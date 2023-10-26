@@ -11,5 +11,4 @@ class Trainer extends Model
 
     protected $fillable = ['name', 'apellido', 'avatar'];
 
-    // Resto del código del modelo
 }

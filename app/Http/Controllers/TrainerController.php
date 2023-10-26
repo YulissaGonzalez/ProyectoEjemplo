@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\TrainerController;
 use Illuminate\Http\Request;
 use App\Models\Trainer;
+use Barryvdh\DomPDF\Facade\pdf as PDF;
 use Illuminate\Support\Facades\Storage;
 
 class TrainerController extends Controller
 {
+
+    public function pdf()
+    {
+        $trainers = Trainer::all();
+        $pdf = PDF::loadView('pdf.listado', compact('trainers'));
+        return $pdf->download('listado.pdf');
+    }
     /**
      * Display a listing of the resource.
      */
